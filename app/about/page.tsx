@@ -1,10 +1,10 @@
 import Block from "@/components/layout/Block";
 
-export default function Home() {
+export default function About() {
   return (
     <main>
       <Block>
-        <p>Home</p>
+        <p>About</p>
       </Block>
     </main>
   )

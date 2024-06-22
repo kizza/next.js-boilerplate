@@ -1,0 +1,19 @@
+.Nav {
+
+  ul {
+    @apply flex;
+
+    li {
+      list-style-type: none;
+
+      a {
+        @apply inline-block border border-pink-200;
+        @apply px-5 py-3;
+
+        &.active {
+          @apply font-bold;
+        }
+      }
+    }
+  }
+}
