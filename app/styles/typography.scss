@@ -1,0 +1,26 @@
+@import "./shared";
+
+/*
+ * Typography
+ */
+
+:root {
+  --size: 400;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  :root {
+    --size: 800;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  :root {
+    --size: 1300;
+  }
+}
+
+html {
+  // font-size: calc(16 * 100vw / var(--size));
+}
+
