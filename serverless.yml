@@ -1,0 +1,39 @@
+org: kizza
+app: nextjs
+service: frontend
+
+provider:
+  name: aws
+  stage: ${opt:stage, "dev"}
+  stackName: ${self:app}-${self:service}-${self:provider.stage}
+
+plugins:
+  - serverless-lift
+
+# stages: Use stages when using version 4
+custom:
+  dev:
+    params:
+      domain:
+        - staging.com
+
+  prod:
+    params:
+      domain:
+        - production.com
+        - www.production.com
+
+constructs:
+  landing:
+    type: static-website
+    path: out
+    redirectToMainDomain: true
+    # domain: ${self:custom.${self:provider.stage}.params.domain}
+    # certificate: arn:aws:acm:us-east-1:{account}:certificate/{00000000-0000-0000-0000-00000000000}
+
+resources:
+  # Use stackName for automatic outputs (to avoid ${service-stage} clash with other app exports)
+  Outputs:
+    ServerlessDeploymentBucketName:
+      Export:
+        Name: ${self:provider.stackName}-ServerlessDeploymentBucketName
