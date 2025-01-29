@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import tailwindcssMotion from "tailwindcss-motion";
+import tailwindcssIntersect from "tailwindcss-intersect";
 
 const config: Config = {
   content: [
@@ -16,6 +17,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [tailwindcssMotion],
+  plugins: [tailwindcssMotion, tailwindcssIntersect],
 };
 export default config;

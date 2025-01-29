@@ -3328,6 +3328,11 @@ table@^6.8.2:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
+tailwindcss-intersect@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-intersect/-/tailwindcss-intersect-2.0.1.tgz#1fed95e81944f9352c7b5d1deb5b9cc43e183531"
+  integrity sha512-0NcIGTKvJwNvMZBKMiykddJdKmJUb3eeVCvy366UP7tS/Sxdxc5E3pR9rwPMLxmhFIYiMdbCKn2G7GfZ8zB/TQ==
+
 tailwindcss-motion@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tailwindcss-motion/-/tailwindcss-motion-1.0.1.tgz#2e2f634ff83c1ecfc2eb7d9eed8670710061775b"
