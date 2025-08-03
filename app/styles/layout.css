@@ -1,0 +1,18 @@
+:root {
+  --inner-width: 900px;
+}
+
+@layer base {
+  @media (min-width: theme(screens.md)) {
+    body {
+      --inner-width: 900px;
+    }
+  }
+
+  @media (min-width: theme(screens.md)) {
+    .inner {
+      width: min(100% - 2rem, var(--inner-width));
+      margin-inline: auto;
+    }
+  }
+}

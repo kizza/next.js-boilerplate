@@ -1,5 +1,6 @@
-.Nav {
+@reference "tailwindcss";
 
+.Nav {
   ul {
     @apply flex;
 

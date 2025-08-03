@@ -4,8 +4,8 @@ import classnames from "classnames";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./styles/global.css";
-import "./styles/layout.scss";
-import "./styles/typography.scss";
+// import "./styles/layout.css";
+// import "./styles/typography.css";
 
 const font = Inter({ subsets: ["latin"] });
 
