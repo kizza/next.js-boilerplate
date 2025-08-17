@@ -1,0 +1,12 @@
+@import "../app/styles/shared";
+
+$base-size: 16px;
+
+.Banner {
+  img {
+
+    @apply w-auto max-w-none mx-auto;
+    width: between(880px, 1800px, 700px, 1200px);
+    top: between(0px, 80px, $breakpoint-tablet, $breakpoint-tablet - 100); // Small top as we approach mobile
+  }
+}

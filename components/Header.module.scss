@@ -1,0 +1,17 @@
+@import "../app/styles/shared";
+
+.Header {
+  padding-top: between(20px, 80px, 400px, 1000px);
+
+  h1 {
+    margin-bottom: between(0px, 80px, 600px, 0);
+
+    img {
+      width: clamp(13rem, 40vw, 28rem); // 16px minimum, fluid
+
+      @media (min-width: $breakpoint-tablet) {
+        width: clamp(23rem, 48vw, 28rem); // 16px minimum, fluid
+      }
+    }
+  }
+}

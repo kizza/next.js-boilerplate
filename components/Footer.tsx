@@ -1,9 +1,9 @@
 import Block from "@/components/layout/Block";
 
 export default function Footer() {
-  return <footer className="bg-gray-200 p-6 text-center">
+  return <footer className="text-[#6e5450] mt-10 p-6 text-sm text-center">
     <Block>
-      Footer
+      Copywright 2025 Susanna O&apos;Leary
     </Block>
   </footer>
 }

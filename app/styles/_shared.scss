@@ -5,4 +5,11 @@
 // 2xl	1536px	@media (min-width: 1536px)
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-$breakpoint-wide: 1536px;
+$breakpoint-wide: 1280px;
+
+@function between($from, $to, $fromWidth, $toWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+
+  @return clamp($from, calc(#{$base} + #{100vw * $slope}), $to);
+}

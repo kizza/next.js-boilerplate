@@ -2,24 +2,26 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import classnames from "classnames";
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "./styles/global.css";
 import "./styles/layout.scss";
 import "./styles/typography.scss";
-
-const font = Inter({ subsets: ["latin"] });
+import Banner from "@/components/Banner";
+import { bodyFont, logoFont } from "@/app/fonts";
+import IntersectProvider from "@/lib/intersectProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
-  width: 'device-width',
+  themeColor: "#4a1c2c",
+  width: "device-width",
   initialScale: 1,
   maximumScale: 1,
   userScalable: true,
 }
 
 export const metadata: Metadata = {
-  title: "My new website",
-  description: "Let's get started!",
+  title: "Kenmore Vocal Studio - Crafting voices that resonate!",
+  description: "",
 };
 
 export default function RootLayout({
@@ -29,13 +31,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={classnames(font.className, "flex flex-col min-h-screen")}>
+      <body className={classnames(bodyFont.className, logoFont.variable, "flex flex-col bg-black text-white")}>
+        <Banner src="/images/background.jpg" alt="" />
         <Header />
-        <div className="flex-grow bg-grey-100">
-          {children}
-        </div>
+          <IntersectProvider>
+            {children}
+          </IntersectProvider>
         <Footer />
       </body>
+
+      <GoogleAnalytics gaId="G-DNVXK2FM13" />
     </html>
   );
 }

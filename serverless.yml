@@ -1,5 +1,5 @@
 org: kizza
-app: nextjs
+app: kenmore-vocal-studio
 service: frontend
 
 provider:
@@ -15,21 +15,21 @@ custom:
   dev:
     params:
       domain:
-        - staging.com
+        - dev.kenmorevocalstudio.com
 
   prod:
     params:
       domain:
-        - production.com
-        - www.production.com
+        - kenmorevocalstudio.com
+        - www.kenmorevocalstudio.com
 
 constructs:
   landing:
     type: static-website
     path: out
     redirectToMainDomain: true
-    # domain: ${self:custom.${self:provider.stage}.params.domain}
-    # certificate: arn:aws:acm:us-east-1:{account}:certificate/{00000000-0000-0000-0000-00000000000}
+    domain: ${self:custom.${self:provider.stage}.params.domain}
+    certificate: arn:aws:acm:us-east-1:373532833815:certificate/0211973f-fab5-4d91-b7a2-3da3658f0f31
 
 resources:
   # Use stackName for automatic outputs (to avoid ${service-stage} clash with other app exports)
